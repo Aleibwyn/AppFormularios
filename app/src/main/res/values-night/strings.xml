@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AppFormularios</string>
+    <string name="tituloRegistro">REGISTRAR USUARIO</string>
+    <string name="valEtNombre">Ingrese su nombre</string>
+    <string name="valEtApellidos">Ingrese su apellido</string>
+    <string name="txtGenero">Seleccione su género:</string>
+    <string name="valRbMasculino">Masculino</string>
+    <string name="valRbFemenino">Femenino\n</string>
+    <string name="txtPreferencia">Seleccione su preferencia:</string>
+    <string name="valCbDeportes">Deportes</string>
+    <string name="valCbMusica">Música</string>
+    <string name="valCbOtros">Otras preferencias</string>
+    <string name="txtEstadoCivil">Seleccione su estado civil:</string>
+    <string name="valBtnRegistrarUsuario">Registrar Usuario</string>
+    <string name="valBtnListarUsuarios">Listar Usuarios</string>
+    <string name="valSwNotificar">¿Notificar?</string>
+</resources>
