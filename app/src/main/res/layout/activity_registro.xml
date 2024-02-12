@@ -15,7 +15,7 @@
             android:id="@+id/imageView"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginTop="300dp"
+            android:layout_marginTop="16dp"
             app:layout_constraintEnd_toStartOf="@+id/guideline6"
             app:layout_constraintStart_toStartOf="@+id/guideline5"
             app:layout_constraintTop_toTopOf="parent"
@@ -59,7 +59,7 @@
             tools:ignore="TouchTargetSizeCheck" />
 
         <EditText
-            android:id="@+id/editTextText2"
+            android:id="@+id/etApellido"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -72,7 +72,7 @@
             tools:ignore="TouchTargetSizeCheck" />
 
         <RadioGroup
-            android:id="@+id/radioGroup"
+            android:id="@+id/rgGenero"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -103,7 +103,7 @@
             android:layout_marginTop="8dp"
             android:text="@string/txtGenero"
             app:layout_constraintStart_toStartOf="@+id/guideline5"
-            app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+            app:layout_constraintTop_toBottomOf="@+id/etApellido" />
 
         <TextView
             android:id="@+id/textView3"
@@ -112,7 +112,7 @@
             android:layout_marginTop="8dp"
             android:text="@string/txtPreferencia"
             app:layout_constraintStart_toStartOf="@+id/guideline5"
-            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+            app:layout_constraintTop_toBottomOf="@+id/rgGenero" />
 
         <LinearLayout
             android:id="@+id/linearLayout"
