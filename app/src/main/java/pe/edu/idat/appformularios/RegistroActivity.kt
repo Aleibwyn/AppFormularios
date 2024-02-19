@@ -3,6 +3,7 @@ package pe.edu.idat.appformularios
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.View.OnClickListener
 import android.widget.AdapterView
@@ -25,8 +26,13 @@ class RegistroActivity : AppCompatActivity(), OnClickListener, AdapterView.OnIte
         binding = ActivityRegistroBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        Log.i("LogCat", "App inicializada!")
+
         binding.btnRegistrarUsuario.setOnClickListener(this)
         binding.btnListarUsuarios.setOnClickListener(this)
+        binding.cbDeportes.setOnClickListener(this)
+        binding.cbMusica.setOnClickListener(this)
+        binding.cbOtros.setOnClickListener(this)
 
         //Integración de la lista
         ArrayAdapter.createFromResource(
@@ -85,16 +91,19 @@ class RegistroActivity : AppCompatActivity(), OnClickListener, AdapterView.OnIte
             val infoPersona = binding.etNombre.text.toString() + " " +
                     binding.etApellido.text.toString() + " " +
                     obtenerGeneroSeleccionado() + " " +
-                    listarPreferencias.toString() + " " +
-                    binding.swNotificar.isChecked
+                    obtenerPreferencias() + " " +
+                    estadoCivil + " " +
+                    binding.swNotificar.isChecked + " "
+
             listarPersonas.add(infoPersona)
+
             AppMensaje.enviarMensaje(
                 binding.root,
                 getString(R.string.mensajeRegistroCorrecto),
                 TipoMensaje.SUCCESSFULL
             )
-            setearControles()
 
+            setearControles()
         }
         //Toast.makeText(applicationContext, "Click en Registro de persona", Toast.LENGTH_LONG).show()
     }
@@ -191,6 +200,16 @@ class RegistroActivity : AppCompatActivity(), OnClickListener, AdapterView.OnIte
 
     override fun onNothingSelected(parent: AdapterView<*>?) {
         TODO("Not yet implemented")
+    }
+
+    private fun obtenerPreferencias(): String {
+        var preferencias = ""
+        /*for (pref in listarPreferencias) {
+            preferencias +=  "$pref - "
+        }
+        return preferencias
+        */
+        return listarPreferencias.joinToString("-")
     }
 
 }
